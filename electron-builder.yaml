@@ -1,0 +1,40 @@
+appId: com.domain.productname
+directories:
+  output: _release
+  buildResources: assets
+afterSign: scripts/notarize.js
+productName: ProductName
+files:
+  - build/**/*
+mac:
+  gatekeeperAssess: false
+  hardenedRuntime: true
+  # Generate Icon
+  icon: assets/icon.png
+  # Add These
+  entitlements: assets/entitlements.mac.plist
+  entitlementsInherit: assets/entitlements.mac.inherit.plist
+  target:
+    - zip
+    - dmg
+dmg:
+  sign: false
+  # Generate a installer background
+  background: assets/background.tiff
+  icon: assets/icon.png
+  iconSize: 110
+  contents:
+    - x: 140
+      y: 245
+    - x: 415
+      y: 245
+      type: link
+      path: /Applications
+  window:
+    width: 540
+    height: 405
+publish:
+  provider: github
+  owner: owner
+  repo: repo
+compression: maximum
