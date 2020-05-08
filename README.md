@@ -10,6 +10,8 @@ The whole idea is to kickstart an Electron application, by not bothering
 - Configuring Notarization
 - Adding Tray functionality
 
+![preview](https://github.com/dimitrisnl/electron-react-typescript-boilerplate/raw/master/repo-assets/preview.png)
+
 ### Included
 
 - Typescript
